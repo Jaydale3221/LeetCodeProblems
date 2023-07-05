@@ -12,10 +12,6 @@ class Solution:
         while stack:
             counts[stack.pop()] = -1
         
-        print(counts)
         for i in range(len(nums1)):
             answer[i] = counts[nums1[i]]
         return answer
-            
-            
-        
