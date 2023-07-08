@@ -1,11 +1,15 @@
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
-        result = [0]* len(temperatures)
-        stack = []
+        deque = collections.deque()
+        answer = [0] * len(temperatures)
 
-        for i, t in enumerate(temperatures):
-            while stack and t > stack[-1][0]:
-                stackT, stackInd = stack.pop() #stackT is temperature and stackInd is Index
-                result[stackInd] = (i - stackInd)
-            stack.append([t,i])
-        return result
+        for i in range(len(temperatures)):
+            while deque and temperatures[deque[-1]] < temperatures[i]:
+                j = deque.pop()
+                answer[j] = i - j
+            deque.append(i)
+        
+        return answer
+
+
+      
