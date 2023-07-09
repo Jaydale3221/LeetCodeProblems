@@ -14,12 +14,7 @@ class MyStack:
         top = self.main.popleft()
         self.main = second
         return top
-        # while len(self.main) > 1:
-        #     second.append(self.main.popleft())
-        # top = self.main.popleft()
-        # self.main = second
-        # return top
-        
+    
     def top(self) -> int:
         return self.main[-1]
 
