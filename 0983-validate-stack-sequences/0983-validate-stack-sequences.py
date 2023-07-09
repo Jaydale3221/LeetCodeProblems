@@ -1,13 +1,15 @@
 class Solution:
     def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:
         stack = []
-        popInd = 0 
+        left = 0
+
+        for right in pushed:
+            stack.append(right)
 
 
-        for num in pushed:
-            stack.append(num)
-            while stack and stack[-1] == popped[popInd]:
+            while stack and stack[-1] == popped[left]:
                 stack.pop()
-                popInd += 1
+                left += 1
+        
+        return  not stack
             
-        return not stack
