@@ -10,7 +10,6 @@ class Solution:
                 increasing.pop()
             while decreasing and decreasing[-1] < nums[right]:
                 decreasing.pop()
-                
 
             increasing.append(nums[right])
             decreasing.append(nums[right])
@@ -23,28 +22,4 @@ class Solution:
                 left += 1 
             answer = max(answer, right-left +1)
         return answer
-        # from collections import deque
-
-#   for right in range(len(nums)):
-#             # maintain the monotonic deques
-#             while increasing and increasing[-1] > nums[right]:
-#                 increasing.pop()
-#             while decreasing and decreasing[-1] < nums[right]:
-#                 decreasing.pop()
-                
-#             increasing.append(nums[right])
-#             decreasing.append(nums[right])
-            
-#             # maintain window property
-#             while decreasing[0] - increasing[0] > limit:
-#                 if nums[left] == decreasing[0]:
-#                     decreasing.popleft()
-#                 if nums[left] == increasing[0]:
-#                     increasing.popleft()
-#                 left += 1
-            
-#             ans = max(ans, right - left + 1)
-
-#         return ans
-
     
