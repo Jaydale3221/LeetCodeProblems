@@ -2,8 +2,8 @@ class Solution:
     def predictPartyVictory(self, senate: str) -> str:
         radiant = collections.deque()
         dire = collections.deque()
-
         n = len(senate)
+
 
         for i in range(len(senate)):
             radiant.append(i) if senate[i] == "R" else dire.append(i)
