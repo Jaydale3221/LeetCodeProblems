@@ -8,12 +8,11 @@ class Solution:
             while stack and stack[-1] < heights[i]: 
                 stack.pop()
                 count += 1
-            
+                
             if stack:
                 count += 1
 
             answer[i] = count
-
             stack.append(heights[i])
 
         return answer
