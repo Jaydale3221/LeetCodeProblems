@@ -10,12 +10,11 @@ class Solution:
 
         queue = deque([root])
         ans = []
-        
-
-        
+                
         while queue:
             length = len(queue)
             ans.append(queue[-1].val)
+
             
             for _ in range(length):
                 node  = queue.popleft()
@@ -23,5 +22,6 @@ class Solution:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
+            
         return ans 
 
