@@ -12,6 +12,7 @@ class Solution:
         ans = []
         
 
+        
         while queue:
             length = len(queue)
             ans.append(queue[-1].val)
