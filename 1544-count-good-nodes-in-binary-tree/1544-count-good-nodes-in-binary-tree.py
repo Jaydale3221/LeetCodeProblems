@@ -12,6 +12,7 @@ class Solution:
             left = dfs(node.left, max(max_so_far, node.val))
             right = dfs(node.right, max(max_so_far, node.val))
             answer = left + right
+            # print(left, right, answer)
 
             if node.val >= max_so_far:
                 answer += 1 
