@@ -12,7 +12,7 @@ class Solution:
 
         while queue:
             length = len(queue)
-            curr_max = float("-inf") # this will store the largest value for the current level
+            curr_max = float("-inf")
 
             for _ in range(length):
                 node = queue.popleft()
