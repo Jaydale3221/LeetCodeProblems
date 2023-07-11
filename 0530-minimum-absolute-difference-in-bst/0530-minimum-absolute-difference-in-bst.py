@@ -7,18 +7,20 @@
 class Solution:
     def getMinimumDifference(self, root: Optional[TreeNode]) -> int:
         values = []
-        ans = float("inf")
+        answer = float("inf")
+
 
         def dfs(node):
-            if not node: return 0
-            
+            if not node: return
+
             left = dfs(node.left)
             values.append(node.val)
-            right = dfs(node.right)        
+            right = dfs(node.right)
+
         dfs(root)
-        
+
 
         for i in range(1, len(values)):
-            ans = min(ans, values[i] - values[i - 1])
+            answer = min(answer, values[i] - values[i - 1])
         
-        return ans
+        return answer
