@@ -6,17 +6,13 @@
 #         self.right = right
 class Solution:
     def removeLeafNodes(self, root: Optional[TreeNode], target: int) -> Optional[TreeNode]:
-
-        return self._helper(root, target)
-
-    def _helper(self, node, target):
-        if not node:
+        if not root:
             return None
         
-        node.left = self._helper(node.left, target)
-        node.right = self._helper(node.right, target)
-
-        if node.left==None and node.right==None and node.val==target:
+        root.left = self.removeLeafNodes(root.left, target)
+        root.right = self.removeLeafNodes(root.right, target)
+        
+        if not root.left and not root.right and root.val == target:
             return None
         
-        return node
+        return root
