@@ -15,15 +15,4 @@ class Solution:
             root.left = self.insertIntoBST(root.left, val)
         
         return root
-            
-
-        
-        # if val > root.val:
-        #     # insert into the right subtree
-        #     root.right = self.insertIntoBST(root.right, val)
-        # else:
-        #     # insert into the left subtree
-        #     root.left = self.insertIntoBST(root.left, val)
-        # return root
-
        
