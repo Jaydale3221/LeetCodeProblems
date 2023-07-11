@@ -18,7 +18,7 @@ class Solution:
             self.maxDiameter = max(self.maxDiameter, leftDepth + rightDepth)
 
             return max(leftDepth, rightDepth) + 1
-            print(max(leftDepth, rightDepth) + 1)
+           
         depth(root)
 
         return self.maxDiameter
