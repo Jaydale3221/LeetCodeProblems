@@ -17,12 +17,9 @@ class Solution:
 
             return result
 
-        values = inorder(root)
+        inorder(root)
         return result[k-1]
  
-
-
-
         # n = 0 
         # stack = []
 
