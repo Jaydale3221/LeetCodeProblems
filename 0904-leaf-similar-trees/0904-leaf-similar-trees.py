@@ -16,6 +16,8 @@ class Solution:
             return result
 
         return dfs(root1) == dfs(root2)
+
+        
         # def dfs(node):
         #     if node:
         #         if not node.left and not node.right:
