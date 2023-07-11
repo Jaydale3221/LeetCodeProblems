@@ -7,10 +7,20 @@
 class Solution:
     def leafSimilar(self, root1, root2):
         def dfs(node):
+            result = []
             if node:
                 if not node.left and not node.right:
-                    yield node.val
-                yield from dfs(node.left)
-                yield from dfs(node.right)
+                    result.append(node.val)
+                result.extend(dfs(node.left))
+                result.extend(dfs(node.right))
+            return result
 
-        return list(dfs(root1)) == list(dfs(root2))
+        return dfs(root1) == dfs(root2)
+        # def dfs(node):
+        #     if node:
+        #         if not node.left and not node.right:
+        #             yield node.val
+        #         yield from dfs(node.left)
+        #         yield from dfs(node.right)
+
+        # return list(dfs(root1)) == list(dfs(root2))
