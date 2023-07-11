@@ -17,6 +17,7 @@ class Solution:
             for _ in range(length):
                 node = queue.popleft()
                 curr_max = max(curr_max, node.val)
+                
                 if node.left:
                     queue.append(node.left)
                 if node.right:
