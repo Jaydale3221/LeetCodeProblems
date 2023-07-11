@@ -15,10 +15,8 @@ class Solution:
             if not low < node.val < high:
                 return False
             
-            return (
-                validate(node.left, low, node.val) and
-                validate(node.right, node.val, high)
-            )
+            return validate(node.left, low, node.val) and validate(node.right, node.val, high)
+            
         
         return validate(root)
 
