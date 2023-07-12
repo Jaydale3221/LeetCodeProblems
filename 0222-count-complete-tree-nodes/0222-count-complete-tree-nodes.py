@@ -21,7 +21,7 @@ class Solution:
         l, r = leftDepth(root), rightDepth(root)
 
         if l == r:
-            return(2 ** l) - 1 
+            return(2 ** r) - 1 
         
         if l > r:
             return 1 + self.countNodes(root.left) + self.countNodes(root.right)
