@@ -7,27 +7,32 @@
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         if not root:
-            return root
+            return None
         
-        root.left, root.right = root.right, root.left
-
+        queue = collections.deque([root])
+        while queue:
+            node = queue.popleft()
+            node.left, node.right = node.right, node.left
+            
+            if node.left:
+                queue.append(node.left)
+            
+            if node.right:
+                queue.append(node.right)
         
-        self.invertTree(root.left)
-        self.invertTree(root.right)
-
-
         return root
- 
-        # if not root: #Base Case
+
+
+        # if not root:
         #     return root
+        
+        # root.left, root.right = root.right, root.left
+
         
         # self.invertTree(root.left)
         # self.invertTree(root.right)
 
-        # # root.left = root.right
-        # # root.right = root.left  ----->>>>>>>>>>>>>>>> while swapping cannot use like this.
-        # root.left, root.right = root.right, root.left
 
         # return root
-
-        
+ 
+       
