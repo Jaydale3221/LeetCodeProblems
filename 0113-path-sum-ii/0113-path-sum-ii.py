@@ -19,7 +19,7 @@ class Solution:
                 res.append(path)         
             
             dfs(node.left, path_sum, path[:])
-            print(path)
+            # print(path)
             dfs(node.right, path_sum, path[:])
 
         dfs(root, 0, [])
