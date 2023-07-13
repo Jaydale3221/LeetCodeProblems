@@ -23,6 +23,7 @@ class Solution:
 
                 if i < length -1:
                     node.next = queue[0]
+                    # print(queue[0])
 
                 if node.left:
                     queue.append(node.left)
