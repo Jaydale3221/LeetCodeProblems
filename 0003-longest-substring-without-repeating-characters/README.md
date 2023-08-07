@@ -27,7 +27,7 @@ Notice that the answer must be a substring, &quot;pwke&quot; is a subsequence an
 </pre>
 
 <p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<p><strong>Constraints:</strong></p> 
 
 <ul>
 	<li><code>0 &lt;= s.length &lt;= 5 * 10<sup>4</sup></code></li>
